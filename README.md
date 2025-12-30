@@ -16,7 +16,7 @@ Dự án phù hợp cho **mục đích học tập, demo hệ thống quản lý
 ---
 
 ## 📁 Cấu trúc thư mục
-.
+```
 ├── admin/        # Chức năng quản trị hệ thống
 ├── dao/          # Data Access Object – xử lý truy vấn CSDL
 ├── layout/       # Các thành phần layout dùng chung
@@ -28,7 +28,7 @@ Dự án phù hợp cho **mục đích học tập, demo hệ thống quản lý
 ├── composer.lock # Phiên bản thư viện
 ├── IMAGES.docx   # Hình ảnh chụp màn hình giao diện web
 └── .DS_Store     # File hệ thống (có thể bỏ qua)
-
+```
 
 
 ---

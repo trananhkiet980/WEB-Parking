@@ -22,7 +22,6 @@ Dự án phù hợp cho **mục đích học tập, demo hệ thống quản lý
 ├── sql/ # File SQL khởi tạo cơ sở dữ liệu
 ├── vendor/ # Thư viện cài đặt qua Composer
 ├── view/ # Giao diện hiển thị (HTML/PHP)
-│
 ├── index.php # Điểm khởi chạy chính của ứng dụng
 ├── composer.json # Cấu hình Composer
 ├── composer.lock # Phiên bản thư viện

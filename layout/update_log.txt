@@ -1,0 +1,40 @@
+Bắt đầu chạy updateParkingStatuses vào: 2025-04-10 07:11:06
+Câu lệnh SQL (completed): UPDATE bookings SET status = 'completed' WHERE status = 'active' AND end_time <= ? với thời gian: 2025-04-10 07:11:06
+Số hàng 'completed' bị ảnh hưởng: 
+Kết thúc chạy updateParkingStatuses
+Bắt đầu chạy updateParkingStatuses vào: 2025-04-10 07:11:30
+Câu lệnh SQL (completed): UPDATE bookings SET status = 'completed' WHERE status = 'active' AND end_time <= ? với thời gian: 2025-04-10 07:11:30
+Số hàng 'completed' bị ảnh hưởng: 
+Kết thúc chạy updateParkingStatuses
+Bắt đầu chạy updateParkingStatuses vào: 2025-04-10 07:13:46
+Câu lệnh SQL (completed): UPDATE bookings SET status = 'completed' WHERE status = 'active' AND end_time <= ? với thời gian: 2025-04-10 07:13:46
+Số hàng 'completed' bị ảnh hưởng: 
+Kết thúc chạy updateParkingStatuses
+Bắt đầu chạy updateParkingStatuses vào: 2025-04-10 07:13:54
+Câu lệnh SQL (completed): UPDATE bookings SET status = 'completed' WHERE status = 'active' AND end_time <= ? với thời gian: 2025-04-10 07:13:54
+Số hàng 'completed' bị ảnh hưởng: 
+Kết thúc chạy updateParkingStatuses
+Bắt đầu chạy updateParkingStatuses vào: 2025-04-10 07:13:56
+Câu lệnh SQL (completed): UPDATE bookings SET status = 'completed' WHERE status = 'active' AND end_time <= ? với thời gian: 2025-04-10 07:13:56
+Số hàng 'completed' bị ảnh hưởng: 
+Kết thúc chạy updateParkingStatuses
+Bắt đầu chạy updateParkingStatuses vào: 2025-04-10 07:15:05
+Câu lệnh SQL (completed): UPDATE bookings SET status = 'completed' WHERE status = 'active' AND end_time <= ? với thời gian: 2025-04-10 07:15:05
+Số hàng 'completed' bị ảnh hưởng: 
+Kết thúc chạy updateParkingStatuses
+Bắt đầu chạy updateParkingStatuses vào: 2025-04-10 07:15:08
+Câu lệnh SQL (completed): UPDATE bookings SET status = 'completed' WHERE status = 'active' AND end_time <= ? với thời gian: 2025-04-10 07:15:08
+Số hàng 'completed' bị ảnh hưởng: 
+Kết thúc chạy updateParkingStatuses
+Bắt đầu chạy updateParkingStatuses vào: 2025-04-10 07:15:26
+Câu lệnh SQL (completed): UPDATE bookings SET status = 'completed' WHERE status = 'active' AND end_time <= ? với thời gian: 2025-04-10 07:15:26
+Số hàng 'completed' bị ảnh hưởng: 
+Kết thúc chạy updateParkingStatuses
+Bắt đầu chạy updateParkingStatuses vào: 2025-04-10 07:15:27
+Câu lệnh SQL (completed): UPDATE bookings SET status = 'completed' WHERE status = 'active' AND end_time <= ? với thời gian: 2025-04-10 07:15:27
+Số hàng 'completed' bị ảnh hưởng: 
+Kết thúc chạy updateParkingStatuses
+Bắt đầu chạy updateParkingStatuses vào: 2025-04-10 07:15:41
+Câu lệnh SQL (completed): UPDATE bookings SET status = 'completed' WHERE status = 'active' AND end_time <= ? với thời gian: 2025-04-10 07:15:41
+Số hàng 'completed' bị ảnh hưởng: 
+Kết thúc chạy updateParkingStatuses

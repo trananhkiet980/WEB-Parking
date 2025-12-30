@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back - Premium Login Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="animated-background">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="animated-orb orb-1"></div>
+        <div class="animated-orb orb-2"></div>
+        <div class="animated-orb orb-3"></div>
+        <div class="stars" id="stars"></div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Login form -->
+                <div class="login-container tilt-element" id="loginContainer">
+                    <div class="row g-0">
+                        <div class="col-md-6 login-form-container">
+                            <h2 class="welcome-text">Welcome Back <span class="wave-emoji">👋</span></h2>
+                            <p class="subtitle typing-effect">Today is a new day. It's your day. You shape it.</p>
+                            <p class="subtitle">Sign in to start managing your projects.</p>
+
+                            <form id="loginForm" action="login.php" method="POST">
+                                <div class="input-with-icon">
+                                    <label for="login-email" class="login-form-label form-typing-effect">Email Address</label>
+                                    <div class="input-with-icon">
+                                        <input type="email" class="login-form-input" id="login-email" name="email"
+                                            placeholder="Enter your email address" required>
+                                        <i class="input-icon fas fa-envelope"></i>
+                                    </div>
+                                    <div class="login-form-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="input-with-icon">
+                                    <label for="login-password" class="login-form-label form-typing-effect">Password</label>
+                                    <div class="input-with-icon">
+                                        <input type="password" class="login-form-input" id="login-password" name="password"
+                                               placeholder="Enter your password" required minlength="8" autocomplete="new-password">
+                                        <i class="input-icon fas fa-lock"></i>
+                                        <span class="password-toggle" onclick="togglePasswordVisibility('login-password')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                    <div class="login-form-feedback">Password must be at least 8 characters.</div>
+                                    <div id="login-error" class="text-danger text-center mt-2" style="display: none;">
+                                        Tài khoản hoặc mật khẩu không đúng hoặc chưa xác thực email</div>
+                                </div>  
+                                <a href="#" class="forgot-password">Forgot Password?</a>
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </form>
+
+                            <div class="divider"><span>Or</span></div>
+                            <div>
+                                <a href="#" class="social-btn google-btn mb-3"><i class="fab fa-google"></i><span>Sign
+                                        in with Google</span></a>
+                                <a href="#" class="social-btn facebook-btn"><i class="fab fa-facebook-f"></i><span>Sign
+                                        in with Facebook</span></a>
+                            </div>
+                            <div class="signup-link">Don't have an account? <a href="#" id="showSignupForm">Sign up</a></div>
+                            <div class="text-center mt-4"
+                                style="opacity: 0.7; transform: translateY(20px); animation: slideInFromBottom 0.5s forwards 1.9s;">
+                                <small class="text-muted">© 2025 ALL RIGHTS RESERVED</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6 image-container">
+                            <div class="image-overlay"></div>
+                            <div class="floating-elements">
+                                <div class="floating-element"><img
+                                        src="https://cdn.pixabay.com/photo/2013/07/13/10/07/rubber-156597_960_720.png"
+                                        alt="Duck element"></div>
+                                <div class="floating-element"><img
+                                        src="https://cdn.pixabay.com/photo/2013/07/13/10/07/rubber-156597_960_720.png"
+                                        alt="Duck element"></div>
+                                <div class="floating-element"><img
+                                        src="https://cdn.pixabay.com/photo/2013/07/13/10/07/rubber-156597_960_720.png"
+                                        alt="Duck element"></div>
+                                <div class="floating-element"><img
+                                        src="https://cdn.pixabay.com/photo/2013/07/13/10/07/rubber-156597_960_720.png"
+                                        alt="Duck element"></div>
+                            </div>
+                            <img src="./img/login.jpg" alt="Login Background">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Signup form -->
+                <div class="login-container tilt-element" id="signupContainer" style="display: none;">
+                    <div class="row g-0">
+                        <div class="col-md-6 login-form-container">
+                            <h2 class="welcome-text">Sign up <span class="wave-emoji">👋</span></h2>
+                            <p class="subtitle">Create an account to get started.</p>
+                            
+                            <form id="signupForm" action="signup.php" method="POST">
+                                <div class="input-with-icon">
+                                    <label for="signup-email" class="login-form-label form-typing-effect">Email Address</label>
+                                    <div class="input-with-icon">
+                                        <input type="email" class="login-form-input" id="signup-email" name="email"
+                                            placeholder="Enter your email address" required>
+                                        <i class="input-icon fas fa-envelope"></i>
+                                    </div>
+                                    <div class="login-form-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="input-with-icon">
+                                    <label for="signup-password" class="login-form-label form-typing-effect">Password</label>
+                                    <div class="input-with-icon">
+                                        <input type="password" class="login-form-input" id="signup-password" name="password"
+                                            placeholder="Enter your password" required minlength="8">
+                                        <i class="input-icon fas fa-lock"></i>
+                                        <span class="password-toggle" onclick="togglePasswordVisibility('signup-password')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                    <div class="login-form-feedback">Password must be at least 8 characters.</div>
+                                    <div id="password-error" class="text-danger text-center mt-2" style="display: none;">
+                                        Mật khẩu không hợp lệ</div>
+                                </div>
+                                <div class="input-with-icon">
+                                    <label for="confirm-password" class="login-form-label form-typing-effect">Confirm Password</label>
+                                    <div class="input-with-icon">
+                                        <input type="password" class="login-form-input" id="confirm-password" name="confirm_password"
+                                            placeholder="Confirm your password" required minlength="8">
+                                        <i class="input-icon fas fa-lock"></i>
+                                        <span class="password-toggle" onclick="togglePasswordVisibility('confirm-password')">
+                                            <i class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                    <div class="login-form-feedback">Passwords must match.</div>
+                                    <div id="signup-error" class="text-danger text-center mt-2" style="display: none;">
+                                        Email đã tồn tại hoặc mật khẩu không đúng</div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Sign up</button>
+                            </form>
+
+                            <div class="divider"><span>Or</span></div>
+                            <div>
+                                <a href="#" class="social-btn google-btn mb-3"><i class="fab fa-google"></i><span>Sign
+                                        up with Google</span></a>
+                                <a href="#" class="social-btn facebook-btn"><i class="fab fa-facebook-f"></i><span>Sign
+                                        up with Facebook</span></a>
+                            </div>
+                            <div class="signup-link">Already have an account? <a href="#" id="showLoginForm">Sign in</a></div>
+                            <div class="text-center mt-4"
+                                style="opacity: 0.7; transform: translateY(20px); animation: slideInFromBottom 0.5s forwards 1.9s;">
+                                <small class="text-muted">© 2025 ALL RIGHTS RESERVED</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6 image-container">
+                            <div class="image-overlay"></div>
+                            <div class="floating-elements">
+                                <div class="floating-element"><img
+                                        src="https://cdn.pixabay.com/photo/2013/07/13/10/07/rubber-156597_960_720.png"
+                                        alt="Duck element"></div>
+                                <div class="floating-element"><img
+                                        src="https://cdn.pixabay.com/photo/2013/07/13/10/07/rubber-156597_960_720.png"
+                                        alt="Duck element"></div>
+                                <div class="floating-element"><img
+                                        src="https://cdn.pixabay.com/photo/2013/07/13/10/07/rubber-156597_960_720.png"
+                                        alt="Duck element"></div>
+                                <div class="floating-element"><img
+                                        src="https://cdn.pixabay.com/photo/2013/07/13/10/07/rubber-156597_960_720.png"
+                                        alt="Duck element"></div>
+                            </div>
+                            <img src="./img/login.jpg" alt="Login Background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

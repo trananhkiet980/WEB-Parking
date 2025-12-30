@@ -1,0 +1,258 @@
+/* notification-styles.css */
+.notification-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    z-index: 1000;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    width: 380px;
+    max-width: 90vw;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+}
+
+.notification-form.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.notification-form.closing {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.notification-form-content {
+    padding: 0;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #262626;
+    border-bottom: 1px solid #333;
+    cursor: grab;
+}
+
+.notification-title {
+    display: flex;
+    align-items: center;
+    color: #f67c35; /* Dùng màu cam giống template */
+}
+
+.notification-title i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.notification-title h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.close-notification-form {
+    cursor: pointer;
+    padding: 5px;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.close-notification-form:hover {
+    color: #fff;
+}
+
+.notification-body {
+    padding: 15px;
+    color: #171616;
+    font-size: 14px;
+}
+
+.notification-body p {
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.notification-details {
+    background-color: #2a2a2a;
+    padding: 10px 12px;
+    border-radius: 5px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #bbb;
+}
+
+.notification-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 15px 15px;
+    gap: 8px;
+}
+
+.notification-actions button {
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.confirm-btn {
+    background-color: #f67c35; /* Màu cam từ template */
+    color: #fff;
+}
+
+.confirm-btn:hover {
+    background-color: #e57231;
+}
+
+.cancel-btn {
+    background-color: #3a3a3a;
+    color: #ddd;
+}
+
+.cancel-btn:hover {
+    background-color: #444;
+}
+
+/* Styles for different notification types */
+.notification-form[data-type="success"] .notification-title {
+    color: #4CAF50;
+}
+
+.notification-form[data-type="success"] .notification-title i {
+    color: #4CAF50;
+}
+
+.notification-form[data-type="success"] .confirm-btn {
+    background-color: #4CAF50;
+}
+
+.notification-form[data-type="success"] .confirm-btn:hover {
+    background-color: #45a045;
+}
+
+.notification-form[data-type="warning"] .notification-title {
+    color: #ffc107;
+}
+
+.notification-form[data-type="warning"] .notification-title i {
+    color: #ffc107;
+}
+
+.notification-form[data-type="warning"] .confirm-btn {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.notification-form[data-type="warning"] .confirm-btn:hover {
+    background-color: #e0a800;
+}
+
+.notification-form[data-type="error"] .notification-title {
+    color: #F44336;
+}
+
+.notification-form[data-type="error"] .notification-title i {
+    color: #F44336;
+}
+
+.notification-form[data-type="error"] .confirm-btn {
+    background-color: #F44336;
+}
+
+.notification-form[data-type="error"] .confirm-btn:hover {
+    background-color: #e53935;
+}
+
+.notification-form[data-type="info"] .notification-title {
+    color: #2196F3;
+}
+
+.notification-form[data-type="info"] .notification-title i {
+    color: #2196F3;
+}
+
+.notification-form[data-type="info"] .confirm-btn {
+    background-color: #2196F3;
+}
+
+.notification-form[data-type="info"] .confirm-btn:hover {
+    background-color: #1e88e5;
+}
+
+/* Thêm hiệu ứng đường viền khi có thông báo thành công */
+.notification-form[data-type="success"] {
+    border-top: 3px solid #4CAF50;
+}
+
+.notification-form[data-type="error"] {
+    border-top: 3px solid #F44336;
+}
+
+.notification-form[data-type="warning"] {
+    border-top: 3px solid #ffc107;
+}
+
+.notification-form[data-type="info"] {
+    border-top: 3px solid #2196F3;
+}
+
+/* Animation khi có thông báo mới */
+@keyframes notification-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(246, 124, 53, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(246, 124, 53, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(246, 124, 53, 0); }
+}
+
+.notification-form.new {
+    animation: notification-pulse 1.5s infinite;
+}
+
+/* Thêm thanh tiến trình cho thông báo tự động đóng */
+.auto-close-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.auto-close-progress-bar {
+    height: 100%;
+    width: 100%;
+    background-color: #f67c35;
+    transform-origin: left;
+    animation: progress-shrink 5s linear forwards;
+}
+
+@keyframes progress-shrink {
+    from { transform: scaleX(1); }
+    to { transform: scaleX(0); }
+}
+
+/* Màu cho thanh tiến trình theo loại thông báo */
+.notification-form[data-type="success"] .auto-close-progress-bar {
+    background-color: #4CAF50;
+}
+
+.notification-form[data-type="warning"] .auto-close-progress-bar {
+    background-color: #ffc107;
+}
+
+.notification-form[data-type="error"] .auto-close-progress-bar {
+    background-color: #F44336;
+}
+
+.notification-form[data-type="info"] .auto-close-progress-bar {
+    background-color: #2196F3;
+}

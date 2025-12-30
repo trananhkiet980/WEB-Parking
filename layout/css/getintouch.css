@@ -1,0 +1,223 @@
+/* Get in Touch Section */
+.contact-section {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 40px 30px;
+    margin: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff7f00, #ff5500);
+    background-size: 200% 100%;
+    animation: gradientSlide 3s infinite linear;
+}
+
+@keyframes gradientSlide {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.contact-heading {
+    color: #ff7f00;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease;
+}
+
+.contact-icon-container {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.contact-icon {
+    width: 110px;
+    height: 110px;
+    background-color: #ff7f00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(255, 127, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-icon i {
+    font-size: 36px;
+    color: white;
+}
+
+.contact-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(255, 127, 0, 0.4);
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 6px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(255, 127, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.form-control::placeholder {
+    color: #777;
+    opacity: 0.8;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.send-button {
+    background: linear-gradient(to right, #ff7f00, #ff5500);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(255, 127, 0, 0.3);
+}
+
+.send-button:hover {
+    background: linear-gradient(to right, #ff5500, #ff7f00);
+    box-shadow: 0 8px 20px rgba(255, 127, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.send-button::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.send-button:hover::after {
+    opacity: 1;
+    transform: rotate(30deg) translate(50%, -50%);
+}
+
+/* Input animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.input-animate {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.input-animate:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.input-animate:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.input-animate:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.input-animate:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Focus indicator */
+.input-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ff7f00;
+    transition: width 0.3s ease;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.form-group:focus-within .input-indicator {
+    width: 100%;
+}

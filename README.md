@@ -16,17 +16,19 @@ Dự án phù hợp cho **mục đích học tập, demo hệ thống quản lý
 ---
 
 ## 📁 Cấu trúc thư mục
-├── admin/ # Chức năng quản trị hệ thống \n
-├── dao/ # Data Access Object – xử lý truy vấn CSDL\n
-├── layout/ # Các thành phần layout dùng chung\n
-├── sql/ # File SQL khởi tạo cơ sở dữ liệu\n
-├── vendor/ # Thư viện cài đặt qua Composer\n
-├── view/ # Giao diện hiển thị (HTML/PHP)\n
-├── index.php # Điểm khởi chạy chính của ứng dụng\n
-├── composer.json # Cấu hình Composer\n
-├── composer.lock # Phiên bản thư viện\n
-├── IMAGES.docx # Hình ảnh chụp màn hình giao diện web\n
-└── .DS_Store # File hệ thống (có thể bỏ qua)
+.
+├── admin/        # Chức năng quản trị hệ thống
+├── dao/          # Data Access Object – xử lý truy vấn CSDL
+├── layout/       # Các thành phần layout dùng chung
+├── sql/          # File SQL khởi tạo cơ sở dữ liệu
+├── vendor/       # Thư viện cài đặt qua Composer
+├── view/         # Giao diện hiển thị (HTML/PHP)
+├── index.php     # Điểm khởi chạy chính của ứng dụng
+├── composer.json # Cấu hình Composer
+├── composer.lock # Phiên bản thư viện
+├── IMAGES.docx   # Hình ảnh chụp màn hình giao diện web
+└── .DS_Store     # File hệ thống (có thể bỏ qua)
+
 
 
 ---

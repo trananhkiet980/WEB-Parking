@@ -3,6 +3,7 @@
 ## 📌 Giới thiệu
 Đây là một **ứng dụng web quản lý bãi đỗ xe** được xây dựng bằng **HTML, CSS và PHP**, hỗ trợ quản lý hoạt động xe ra/vào, thông tin bãi đỗ và dữ liệu liên quan thông qua giao diện web trực quan.  
 Dự án phù hợp cho **mục đích học tập, demo hệ thống quản lý** hoặc làm nền tảng mở rộng trong tương lai.
+Được thực hiện từ Tháng 1/2025 đến Tháng 3/2025
 
 ---
 
